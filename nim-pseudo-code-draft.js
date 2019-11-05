@@ -12,7 +12,7 @@
 
 // while again is equal to true 
 	// variable count equal to 0 and variable turns equal to 0
-	// variable next to the remainder of games divided by 2 (modulus)
+	// variable next to the remainder of games divided by 2 (modulus) ((next = games % 2))
 // while next is equal to 0, call cpuTurn
 // if next is not equal to 0, call userTurn
 
