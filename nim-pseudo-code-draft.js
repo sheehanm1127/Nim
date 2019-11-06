@@ -11,14 +11,16 @@
 /* Main */
 
 // while again is equal to true 
-	// variable count equal to 0 and variable turns equal to 0
-	// variable next to the remainder of games divided by 2 (modulus) ((next = games % 2))
-// while next is equal to 0, call cpuTurn
-// if next is not equal to 0, call userTurn
+	// variable count equal to 0 
+	// variable turns equal to 0
+	
+	// variable next to the remainder of games divided by 2 (modulus)
+// if next is equal to 0, call cpuTurn
+// else if next is not equal to 0, call userTurn
 
 // after a cpuTurn or userTurn, add turn int to variable count
 
-// if count is greater than or equal to 21, 
+// while count is greater than or equal to 21, 
 	// call function declare winner
 	// add 1 to games
 	// call playAgain
