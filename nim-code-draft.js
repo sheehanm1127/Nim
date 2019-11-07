@@ -6,21 +6,29 @@
 var games = 0;
 // declare variable again and set equal to true
 var again = true;
-// declare variable count and set equal to 0
-var count = 0;
-// declare variable turns and set equal to 0
-var turns = 0;
 // declare variable next and set equal to 0
 var next = 0;
+// declare variable count and set equal to 0
+var count = 0;
+// declare variable turn and set equal to 0
+var turn = 0;
+// declare variable turns and set equal to 0
+var turns = 0;
+
 
 /* Main */
 
 // while again is equal to true 
 while (again == true) {
-	// variable count equal to 0 
+	/* reset variables for a new game */
+	// variable count set equal to 0
 	count = 0;
-	// variable turns equal to 0
+	// variable turn set equal to 0
+	turn = 0;
+	// variable turns set equal to 0
 	turns = 0;
+	// variable next set equal to the remainder of games divided by 2
+	next = games % 2;
 	
 	// variable next to the remainder of games divided by 2 (modulus)
 	
