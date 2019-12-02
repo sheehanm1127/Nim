@@ -25,7 +25,7 @@ while (again == true) {
 	}
 	again = declareWinner(next);
 }
-alert("Nice playing with you!");
+alert("Thanks for playing!");
 
 /* Functions */
 
@@ -43,9 +43,9 @@ function cpuTurn(count){
 		turn = Math.floor(Math.random()*3)+1;		
 		if (turn == 1 || turn > 1 && count+turn < 21) goodTurn = true;	
 	}	
-	alert("CPU counts "+turn);	
+	alert("CPU counts " + turn);	
 	count += turn;	
-	alert("Count is now "+count);	
+	alert("Count is now " + count);	
 	return count;
 }
 
@@ -63,7 +63,7 @@ function userTurn(count) {
 		turn = prompt("Enter 1, 2 or 3");		
 		if (turn > 0 && turn < 4 && Math.floor(turn) == turn) goodTurn = true;		
 		else {
-			alert("Invalid input. Enter 1,2 or 3.");
+			alert("Invalid count. Enter 1,2 or 3.");
 		}	
 	}	
 	count += Number(turn);	
@@ -104,6 +104,6 @@ function declareWinner(next){
 	}	
 	alert(winner + " won!");	
 	games++;	
-	again = confirm("Press OK to play, Cancel to quit.");
+	again = confirm("Press OK to play again, press Cancel to quit.");
 	return again;
 }
