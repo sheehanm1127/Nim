@@ -16,7 +16,7 @@ while (again == true) {
 	next = games%2;	
 	while (count < 21){		
 		if (next == 0) {
-			count = cpuTurn(count);
+			count = cpuTrainer(count);
 		}		
 		else count = userTurn(count);		
 		if (count < 21) {
@@ -30,25 +30,28 @@ alert("Thanks for playing!");
 /* Functions */
 
 /* 
-function cpuTurn() 
-* creates turn for cpu; generate random number between 1 and 3 (alert int to player)
-* Param none
-* Return boolean
+function cpuTrainer(count) 
+* creates turn for cpu; When the cpu is presented with a count that is a multiple of 4, generate random number 1-3 for turn. When count is not a multiple of 4, cpu calculates turn.
+* Param count
+* Return variable
 */
 
-function cpuTurn(count){	
-	var goodTurn = false;	
-	var turn = 0;	
-	while (goodTurn == false) {		
-		turn = Math.floor(Math.random()*3)+1;		
-		if (turn == 1 || turn > 1 && count+turn < 21) goodTurn = true;	
-	}	
-	alert("CPU counts " + turn);	
-	count += turn;	
-	alert("Count is now " + count);	
+function cpuTrainer(count) {
+	if (count%4 != 0) {
+		turn = 4 - (count%4);
+	}
+	else if (count == 20) {
+		turn = 1;
+	}
+	else {
+		turn = Math.floor(Math.random()*3)+1;
+	}
+	alert("CPU counts " + turn);
+	count+=turn;
+	alert("Count is now " + count);
 	return count;
 }
-
+  
 /* 
 function userTurn() 
 * prompts user for turn amount and validates user's input 
